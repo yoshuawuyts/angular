@@ -91,11 +91,15 @@ module.exports = function (grunt) {
     'test',
   ]);
 
+  grunt.registerTask('server', [
+    'concurrent:dev',
+  ]);
+
   // Build, lint, test and server
   grunt.registerTask('default', [
     'lint',
     'build',
     'test',
-    'concurrent:dev',
+    'server',
   ]);
 };

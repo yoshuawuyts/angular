@@ -1,0 +1,70 @@
+!!! 5
+//if lt IE 7
+  <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+//if IE 7
+  <html class="no-js lt-ie9 lt-ie8">
+//if IE 8
+  <html class="no-js lt-ie9">
+//[if gt IE 8]><!
+html(class='no-js')
+  //<![endif]
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    
+    //- Title and description
+    title Your appName
+    meta(name='description', content='A sails application')
+
+    //- Viewport mobile tag for sensible mobile support
+    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
+    
+    //- Set favicon
+    link(rel='shortcut icon', href='favicon.ico', type='image/x-icon') 
+    
+    //- Include your styles here
+    link(rel="stylesheet", href="/build/styles.min.css")
+
+   body(ng-app='myApp', ng-controller='driversController')
+    div {{1+2}}
+    table
+      thead
+        tr
+          th(colspan='4') Drivers Championship Standings
+      tbody
+        tr(ng-repeat='driver in driversList')
+          td {{$index + 1}}
+          td
+            img(sr='img/flags/{{driver.Driver.nationality}}.png')
+          td {{driver.Constructors[0].name}}
+          td {{driver.points}}
+
+        
+
+    .chromeframe
+      //if lt IE 7
+        p.chromeframe.
+          You are using an <strong>outdated</strong> browser.
+          Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+          <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+          to improve your experience.
+    
+    //- Angular with fallback to native (uncomment to activate)
+    script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js")
+    //- script window.angular || document.write('<script src="js/angular.min.js"><\/script>')
+    
+    //- jQuery with fallback to native (uncomment to activate)
+    //- script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    //- script window.jQuery || document.write('<script src="js/vendor/jquery-2.0.3.min.js"><\\/script>')
+    
+    //- Livereload
+    script document.write('<script src="' + (location.protocol || 'http:') + '//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
+    
+    //- Include your scripts here
+    script(type="text/javascript", src="/concat/production.js")
+    
+    script.
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));  
