@@ -1,7 +1,9 @@
 'use strict';
-/*
+
 angular.module('myApp.controllers', []).
 controller('driversController', function ($scope) {
+
+  /*
   $scope.driversList = [{
     Driver: {
       givenName: 'Sebastian',
@@ -23,5 +25,5 @@ controller('driversController', function ($scope) {
       name: "Ferrari"
     }]
   }];
+  */
 });
-*/
