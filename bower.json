@@ -1,0 +1,11 @@
+{
+  "name": "ngApp",
+  "dependencies": {
+    "angular": "~1.2.6",
+    "angular-ui-router": "~0.2.7"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.0.7",
+    "angular-scenario": "~1.0.7"
+  }
+}

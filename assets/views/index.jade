@@ -39,8 +39,6 @@ html(class='no-js')
           td {{driver.Constructors[0].name}}
           td {{driver.points}}
 
-        
-
     .chromeframe
       //if lt IE 7
         p.chromeframe.
@@ -61,10 +59,10 @@ html(class='no-js')
     script document.write('<script src="' + (location.protocol || 'http:') + '//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
     
     //- Include your scripts here
-    script(type="text/javascript", src="/concat/production.js")
+    script(type="text/javascript", src="/app.min.js")
     
     script.
       var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
       g.src='//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));  
+      s.parentNode.insertBefore(g,s)}(document,'script'));

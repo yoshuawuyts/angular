@@ -65,7 +65,7 @@ module.exports = function (grunt) {
 
   // Build js
   grunt.registerTask('js', [
-    'concat',
+    'concat:js',
     'uglify:compile',
   ]);
 
