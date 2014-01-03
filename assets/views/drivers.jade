@@ -1,0 +1,17 @@
+
+//- Search field
+input(type='text', ng-model='nameFilter', placeholder='Search...')
+
+table(style='width:300px')
+  thead
+    tr
+      th(colspan='4') Drivers Championship Standings
+
+  tbody
+    tr(ng-repeat='driver in driversList | filter: searchFilter')
+      td {{$index + 1}}
+      td
+        img(sr='img/flags/{{driver.Driver.nationality}}.png')
+        a(href='/drivers/{{driver.Driver.driverId}}') {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+      td {{driver.Constructors[0].name}}
+      td {{driver.points}}

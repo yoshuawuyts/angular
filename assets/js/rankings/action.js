@@ -7,9 +7,9 @@ angular.module('myApp')
 .controller('driversController', ['$scope', 'ergastAPIservice',
 
   function (scope, ergastAPIservice) {
+
     scope.nameFilter = null;
     scope.driversList = [];
-
     scope.searchFilter = function (driver) {
       var keyword = new RegExp(scope.nameFilter, 'i');
       return !scope.nameFilter || keyword.test(driver.Driver.givenName) || keyword.test(driver.Driver.familyName);

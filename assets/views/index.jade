@@ -27,21 +27,8 @@ html(class='no-js')
 
    body(ng-app='myApp', ng-controller='driversController')
 
-    //- Search field
-    input(type='text', ng-model='nameFilter', placeholder='Search...')
 
-    table
-      thead
-        tr
-          th(colspan='4') Drivers Championship Standings
-
-      tbody
-        tr(ng-repeat='driver in driversList | filter: nameFilter')
-          td {{$index + 1}}
-          td
-            img(sr='img/flags/{{driver.Driver.nationality}}.png')
-          td {{driver.Constructors[0].name}}
-          td {{driver.points}}
+    ng-view
 
     .chromeframe
       //if lt IE 7

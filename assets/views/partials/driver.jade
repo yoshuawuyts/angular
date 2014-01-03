@@ -1,0 +1,34 @@
+section#main
+  nav#secondary.main-nav
+    .driver-picture
+      .avatar
+        img(ng-show='driver', src='img/drivers/{{driver.Driver.driverId}}.png')
+        img(ng-show='driver', src='img/drivers/{{driver.Driver.nationality}}.png')
+        {{driver.Driver.givenName}}
+        {{driver.Driver.familyName}}
+
+    .driver-status
+      Country: {{driver.Driver.nationionality}} 
+      Team: {{driver.Constructors[0].name}}
+      Birth: {{driver.Driver.dateOfBirth}}
+      a(href='{{driver.Driver.url}}', target='_blank') Biography
+
+  .main-content
+    table.result-table
+      thead
+        tr
+          th(colspan='5') Formula 1 2013 results
+      tbody
+        tr
+          td Round
+          td Grand Prix
+          td Team
+          td Grid
+          td Race
+        tr(ng-repeat='race in races')
+          td{{race.round}}
+          td
+            img(src='img/flags/{{race.Circuit.Location.country}}.png') {{race.raceName}}
+          td{{race.Results[0].Consctuctor.name}}
+          td{{race.Results[0].grid}}
+          td{{race.Results[0].position}}
