@@ -8,7 +8,14 @@ angular.module('myApp')
     // remove # from urls
     locationProvider.html5Mode(true);
 
-    routeProvider.when("/drivers/:id", {
+    routeProvider.
+
+    when("/drivers/hello", {
+      templateUrl: "driver.html",
+      controller: "driversController"
+    }).
+
+    when("/:id", {
       templateUrl: "driver.html",
       controller: "driversController"
     });

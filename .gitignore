@@ -15,5 +15,5 @@ npm-debug.log
 node_modules
 
 #ignored folders
-.tmp/
-build/
+.tmp
+build
